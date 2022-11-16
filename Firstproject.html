@@ -10,19 +10,94 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .rounded-img {
+        width: 70%;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        padding: 0.6em;
+        margin-bottom: 1em;
+      }
+    </style>
+    <!--(<style> означает стиль, стиль CSS) Ставим тчк . и после тчк пишем название стиля(можно свое название) После ставим {}-->
+    <!--{В фигурных скобках пишим "правила" стиля } -->
+    <!--(width: 60% Ширина изображения, ширина изображения от родительского окна т.е от изначальной картинки)-->
+    <!--(border-radius: 50% Закругляет изображение)-->
+    <!--box-shadow:(Тень) 0 0 10px rgba(red, green, blue, alpha) (alpha - означает прозрачность) -->
+    <!--padding:(padding - это внутренний отступ (от картинки)) 0.6em(Это размер отступа, можно указывать в пикселях PX)-->
+    <!-- (margin-bottom: 1em отступ снизу эл-та в нашем случаее картинки.) -->
   </head>
   <body>
-    <div class="container text-center">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">F P</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container text-center my-5">
+      <!--(container text-center центрирует текст) (my(y означает ось по вертикали)-5(5 это расстояние))-->
       <div class="row">
-        <div class="col-lg-4 mx-auto">
-          <img src="img.jpg" alt="Not" />
-          <h1>Roman Denisov</h1>
-          <p>
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <img class="rounded-img" src="img.jpg" alt="Not" />
+          <!--(src="img.jpg") Картинка-->
+          <!--(rounded-img наш стиль CSS переносим в строку к нужной картинке.)-->
+          <h1 class="fw-light">Roman Denisov</h1>
+          <!-- (class="fw-light" стиль из bootstrap) -->
+          <p class="lead text-muted">
+            <!-- (class="lead text-muted" Для данного текста используется два класса) -->
+            <!-- Класс (lead) делает текст чуть больше -->
+            <!--Класс text-muted делает текст серым (Данный стиль из bootstrap) -->
             Yesterday I visited my Granny in the countryside. We go there every
             weekend and I enjoy these trips.
           </p>
-          <button type="button" class="btn btn-secondary">Like !</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            class="btn btn-secondary"
+          >
+            <!--(href= Тут вставляется ссылка на сайт) (target="_blank" благодаря этой команде переходит на след вкладку.)-->
+            <!--(class="btn btn-primary" класс который создает кнопку.) -->
+            <!-- (class="btn btn-secondary) (btn это значит "кнопка") (btn(Кнопка)-secondary(Цвет кнопки (фон)) )-->
+            My youtube
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=W4MIiV4nZDY&t=5942s"
+            target="_blank"
+          >
+            Youtube Bogdan
+            <!--Тут нет класса (class="btn btn-primary")  это значит, что ссылка будет подсвечиваться не как кнопка, а как ссылка.-->
+          </a>
         </div>
       </div>
     </div>
